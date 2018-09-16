@@ -20,14 +20,11 @@
         android:src="@drawable/logo" />
 
 
-
-
     <TextView
         android:id="@+id/welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-
         android:text="أهلا وسهلاً بك"
         android:textColor="#fff"
         android:textSize="35sp"
