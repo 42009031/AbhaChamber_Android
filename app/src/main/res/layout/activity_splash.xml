@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    tools:context="org.abhacci.amado.abhachamber_android_app.splash.SplashActivity">
+
+    <ImageView
+        android:id="@+id/icon6"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/icon6" />
+
+    <ImageView
+        android:id="@+id/icon1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/icon1" />
+
+    <ImageView
+        android:id="@+id/icon2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/icon2" />
+
+    <ImageView
+        android:id="@+id/icon3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/icon3" />
+
+    <ImageView
+        android:id="@+id/icon4"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/icon4" />
+
+    <ImageView
+        android:id="@+id/icon5"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/icon5" />
+
+    <LinearLayout
+        android:id="@+id/exploreLayout"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/icon8"
+            android:layout_width="0dp"
+            android:layout_height="190dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon8" />
+
+        <ImageView
+            android:id="@+id/icon7"
+            android:layout_width="0dp"
+            android:layout_height="190dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon7" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/logoName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/exploreLayout"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/icon9"
+        />
+
+</RelativeLayout>
