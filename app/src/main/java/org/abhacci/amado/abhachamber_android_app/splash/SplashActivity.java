@@ -1,16 +1,23 @@
 package org.abhacci.amado.abhachamber_android_app.splash;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.os.Build;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import org.abhacci.amado.abhachamber_android_app.R;
+import org.abhacci.amado.abhachamber_android_app.home.HomeActivity;
 import org.abhacci.amado.abhachamber_android_app.introduction._IntroductionActivity;
+
+import java.util.Locale;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -125,11 +132,31 @@ public class SplashActivity extends AppCompatActivity {
     private void StartIntroActivity() {
         new CountDownTimer(2000, 1000) {
             @Override
-            public void onTick(long l) {}
+            public void onTick(long l) {
+            }
+
             @Override
             public void onFinish() {
-                startActivity(new Intent(SplashActivity.this, _IntroductionActivity.class));
+                setLocal("ar");
+                startActivity(new Intent(SplashActivity.this, HomeActivity.class));
             }
         }.start();
     }
+
+    private void setLocal(String mComingLocal) {
+        Resources res = getResources();
+
+        DisplayMetrics dm = res.getDisplayMetrics();
+        android.content.res.Configuration conf = res.getConfiguration();
+        Locale local = Locale.getDefault();
+        if (mComingLocal.contains("ar")) {
+            local = new Locale("ar", "eg");
+        } else {
+            local = new Locale("en", "us");
+        }
+        Locale.setDefault(local);
+        conf.setLocale(local);
+        conf.setLayoutDirection(local);
+        res.updateConfiguration(conf,dm);
+}
 }
