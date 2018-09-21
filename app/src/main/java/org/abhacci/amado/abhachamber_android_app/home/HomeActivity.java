@@ -83,18 +83,18 @@ public class HomeActivity extends AppCompatActivity {
         fragmentManager.beginTransaction().replace(R.id.container_frame, new HomeFragment()).addToBackStack(null).commit();
 
         final ArrayList<GenericModel> nav_items = new ArrayList<>();
-        nav_items.add(new GenericModel(R.drawable.build, "تسجيل الدخول."));
-        nav_items.add(new GenericModel(R.drawable.build, "الخدمات الالكترونية."));
-        nav_items.add(new GenericModel(R.drawable.build, "إدارات الغرفة."));
-        nav_items.add(new GenericModel(R.drawable.build, "التوطين والتدريب."));
-        nav_items.add(new GenericModel(R.drawable.build, "اللجان النوعية."));
-        nav_items.add(new GenericModel(R.drawable.build, "المنشآت الصغيرة والمتوسطة."));
-        nav_items.add(new GenericModel(R.drawable.build, "سيدات الاعمال."));
-        nav_items.add(new GenericModel(R.drawable.build, "البحوث والمعلومات."));
-        nav_items.add(new GenericModel(R.drawable.build, "الإعلام والعلاقات العامة."));
-        nav_items.add(new GenericModel(R.drawable.build, "عن الغرفة."));
-        nav_items.add(new GenericModel(R.drawable.build, "إتصل بنا."));
 
+        nav_items.add(new GenericModel(R.drawable.login, "تسجيل الدخول."));
+        nav_items.add(new GenericModel(R.drawable.internet, "الخدمات الالكترونية."));
+        nav_items.add(new GenericModel(R.drawable.departments, "إدارات الغرفة."));
+        nav_items.add(new GenericModel(R.drawable.localization_trianing, "التوطين والتدريب."));
+        nav_items.add(new GenericModel(R.drawable.connections, "اللجان النوعية."));
+        nav_items.add(new GenericModel(R.drawable.projects, "المنشآت الصغيرة والمتوسطة."));
+        nav_items.add(new GenericModel(R.drawable.business_women, "سيدات الاعمال."));
+        nav_items.add(new GenericModel(R.drawable.research, "البحوث والمعلومات."));
+        nav_items.add(new GenericModel(R.drawable.relation, "الإعلام والعلاقات العامة."));
+        nav_items.add(new GenericModel(R.drawable.about, "عن الغرفة."));
+        nav_items.add(new GenericModel(R.drawable.call, "إتصل بنا."));
 
         MenuAdapter nav_adapter = new MenuAdapter(this, nav_items);
         menuRv.setAdapter(nav_adapter);

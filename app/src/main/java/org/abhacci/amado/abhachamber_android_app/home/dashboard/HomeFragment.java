@@ -19,6 +19,7 @@ import org.abhacci.amado.abhachamber_android_app.common.GenericModel;
 import org.abhacci.amado.abhachamber_android_app.common.RecyclerItemClickListener;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -39,18 +40,18 @@ public class HomeFragment extends Fragment {
     private void initRecycelrView(View rootView ) {
 
         final ArrayList<GenericModel> dashboardModelList = new ArrayList<>();
-        dashboardModelList.add(new GenericModel(R.drawable.build, "الخدمات الالكترونية."));
-        dashboardModelList.add(new GenericModel(R.drawable.build, "إدارات الغرفة."));
-        dashboardModelList.add(new GenericModel(R.drawable.build, "التوطين والتدريب."));
-        dashboardModelList.add(new GenericModel(R.drawable.build, "اللجان النوعية."));
-        dashboardModelList.add(new GenericModel(R.drawable.build, "المنشآت الصغيرة والمتوسطة."));
-        dashboardModelList.add(new GenericModel(R.drawable.build, "سيدات الاعمال."));
-        dashboardModelList.add(new GenericModel(R.drawable.build, "البحوث والمعلومات."));
-        dashboardModelList.add(new GenericModel(R.drawable.build, "الإعلام والعلاقات العامة."));
-        dashboardModelList.add(new GenericModel(R.drawable.build, "عن الغرفة."));
-        dashboardModelList.add(new GenericModel(R.drawable.build, "إتصل بنا."));
+        dashboardModelList.add(new GenericModel(R.drawable.internet, "الخدمات الالكترونية."));
+        dashboardModelList.add(new GenericModel(R.drawable.departments, "إدارات الغرفة."));
+        dashboardModelList.add(new GenericModel(R.drawable.localization_trianing, "التوطين والتدريب."));
+        dashboardModelList.add(new GenericModel(R.drawable.connections, "اللجان النوعية."));
+        dashboardModelList.add(new GenericModel(R.drawable.projects, "المنشآت الصغيرة والمتوسطة."));
+        dashboardModelList.add(new GenericModel(R.drawable.business_women, "سيدات الاعمال."));
+        dashboardModelList.add(new GenericModel(R.drawable.research, "البحوث والمعلومات."));
+        dashboardModelList.add(new GenericModel(R.drawable.relation, "الإعلام والعلاقات العامة."));
+        dashboardModelList.add(new GenericModel(R.drawable.about, "عن الغرفة."));
+        dashboardModelList.add(new GenericModel(R.drawable.call, "إتصل بنا."));
 
-        LinearLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2, GridLayoutManager.HORIZONTAL, false);
+        LinearLayoutManager layoutManager = new GridLayoutManager(getActivity(), 3, GridLayoutManager.HORIZONTAL, false);
         RecyclerView dashboard_rv = (RecyclerView) rootView.findViewById(R.id.dashboard_rv);
         dashboard_rv.setLayoutManager(layoutManager);
         DashboardAdapter adapter = new DashboardAdapter(getActivity(), dashboardModelList);
@@ -73,12 +74,13 @@ public class HomeFragment extends Fragment {
 
         final int[] currentPage = {0};
         int NUM_PAGES = 0;
-        final Integer[] IMAGES = {R.drawable.one, R.drawable.two, R.drawable.three, R.drawable.four};
+        final Integer[] IMAGES = {R.drawable.slider2,
+                R.drawable.slider3,
+                R.drawable.six,
+                R.drawable.eight};
+
         ArrayList<Integer> ImagesArray = new ArrayList<Integer>();
-
-        for (int i = 0; i < IMAGES.length; i++)
-
-            ImagesArray.add(IMAGES[i]);
+        ImagesArray.addAll(Arrays.asList(IMAGES));
 
         final ViewPager mPager = (ViewPager) rootView.findViewById(R.id.viewPager);
         PageIndicatorView pageIndicatorView = (PageIndicatorView) rootView.findViewById(R.id.pageIndicatorView);
@@ -107,7 +109,5 @@ public class HomeFragment extends Fragment {
                 handler.post(Update);
             }
         }, 3000, 3000);
-
-
     }
 }

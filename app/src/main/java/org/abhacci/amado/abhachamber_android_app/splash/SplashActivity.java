@@ -130,7 +130,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void StartIntroActivity() {
-        new CountDownTimer(2000, 1000) {
+        new CountDownTimer(1000, 1000) {
             @Override
             public void onTick(long l) {
             }
@@ -138,7 +138,8 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 setLocal("ar");
-                startActivity(new Intent(SplashActivity.this, HomeActivity.class));
+                startActivity(new Intent(SplashActivity.this, _IntroductionActivity.class));
+                finish();
             }
         }.start();
     }
