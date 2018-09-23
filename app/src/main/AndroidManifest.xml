@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.abhacci.amado.abhachamber_android_app">
+    package="org.abhacci.amado.abhachamber_android_app1">
 
     <application
         android:allowBackup="true"
@@ -8,11 +8,11 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        android:hardwareAccelerated="false"
+        android:hardwareAccelerated="true"
         android:largeHeap="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".splash.SplashActivity"
+            android:name="org.abhacci.amado.abhachamber_android_app1.splash.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,11 +22,11 @@
         </activity>
 
         <activity
-            android:name=".introduction._IntroductionActivity"
+            android:name="org.abhacci.amado.abhachamber_android_app1.introduction._IntroductionActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".home.HomeActivity"
+            android:name="org.abhacci.amado.abhachamber_android_app1.home.HomeActivity"
             android:screenOrientation="portrait" />
     </application>
 

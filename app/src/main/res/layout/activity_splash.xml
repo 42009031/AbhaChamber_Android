@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/background"
-    tools:context="org.abhacci.amado.abhachamber_android_app.splash.SplashActivity">
+    tools:context="org.abhacci.amado.abhachamber_android_app1.splash.SplashActivity">
 
     <ImageView
         android:id="@+id/icon6"
