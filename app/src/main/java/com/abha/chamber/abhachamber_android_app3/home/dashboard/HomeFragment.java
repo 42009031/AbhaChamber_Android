@@ -1,4 +1,4 @@
-package org.abhacci.amado.abhachamber_android_app1.home.dashboard;
+package com.abha.chamber.abhachamber_android_app3.home.dashboard;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -12,11 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.abha.chamber.abhachamber_android_app3.common.GenericModel;
+import com.abha.chamber.abhachamber_android_app3.common.RecyclerItemClickListener;
 import com.rd.PageIndicatorView;
 
 import org.abhacci.amado.abhachamber_android_app1.R;
-import org.abhacci.amado.abhachamber_android_app1.common.GenericModel;
-import org.abhacci.amado.abhachamber_android_app1.common.RecyclerItemClickListener;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,7 +30,7 @@ public class HomeFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.home_layout, container, false);
+        View rootView = inflater.inflate( R.layout.home_layout, container, false);
 
         initSliderImageView(rootView);
         initRecycelrView(rootView);
@@ -40,19 +41,19 @@ public class HomeFragment extends Fragment {
     private void initRecycelrView(View rootView ) {
 
         final ArrayList<GenericModel> dashboardModelList = new ArrayList<>();
-        dashboardModelList.add(new GenericModel(R.drawable.ic_ecommerce, "الخدمات الالكترونية."));
-        dashboardModelList.add(new GenericModel(R.drawable.ic_admin, "إدارات الغرفة."));
-        dashboardModelList.add(new GenericModel(R.drawable.ic_work, "التوطين والتدريب."));
-        dashboardModelList.add(new GenericModel(R.drawable.ic_commitment, "اللجان النوعية."));
-        dashboardModelList.add(new GenericModel(R.drawable.ic_factory, "المنشآت الصغيرة والمتوسطة."));
-        dashboardModelList.add(new GenericModel(R.drawable.ic_elegant_lady, "سيدات الاعمال."));
-        dashboardModelList.add(new GenericModel(R.drawable.ic_network, "البحوث والمعلومات."));
-        dashboardModelList.add(new GenericModel(R.drawable.ic_seo, "الإعلام والعلاقات العامة."));
-        dashboardModelList.add(new GenericModel(R.drawable.ic_help, "عن الغرفة."));
-        dashboardModelList.add(new GenericModel(R.drawable.ic_talking, "إتصل بنا."));
+        dashboardModelList.add(new GenericModel( R.drawable.ic_ecommerce, "الخدمات الالكترونية."));
+        dashboardModelList.add(new GenericModel( R.drawable.ic_admin, "إدارات الغرفة."));
+        dashboardModelList.add(new GenericModel( R.drawable.ic_work, "التوطين والتدريب."));
+        dashboardModelList.add(new GenericModel( R.drawable.ic_commitment, "اللجان النوعية."));
+        dashboardModelList.add(new GenericModel( R.drawable.ic_factory, "المنشآت الصغيرة والمتوسطة."));
+        dashboardModelList.add(new GenericModel( R.drawable.ic_elegant_lady, "سيدات الاعمال."));
+        dashboardModelList.add(new GenericModel( R.drawable.ic_network, "البحوث والمعلومات."));
+        dashboardModelList.add(new GenericModel( R.drawable.ic_seo, "الإعلام والعلاقات العامة."));
+        dashboardModelList.add(new GenericModel( R.drawable.ic_help, "عن الغرفة."));
+        dashboardModelList.add(new GenericModel( R.drawable.ic_talking, "إتصل بنا."));
 
         LinearLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2, GridLayoutManager.HORIZONTAL, false);
-        RecyclerView dashboard_rv = (RecyclerView) rootView.findViewById(R.id.dashboard_rv);
+        RecyclerView dashboard_rv = (RecyclerView) rootView.findViewById( R.id.dashboard_rv);
         dashboard_rv.setLayoutManager(layoutManager);
         DashboardAdapter adapter = new DashboardAdapter(getActivity(), dashboardModelList);
         dashboard_rv.setAdapter(adapter);
@@ -74,16 +75,16 @@ public class HomeFragment extends Fragment {
 
         final int[] currentPage = {0};
         int NUM_PAGES = 0;
-        final Integer[] IMAGES = {R.drawable.slider1,
-                R.drawable.slider2,
-                R.drawable.slider3,
-                R.drawable.slider4};
+        final Integer[] IMAGES = { R.drawable.slider1,
+                 R.drawable.slider2,
+                 R.drawable.slider3,
+                 R.drawable.slider4};
 
         ArrayList<Integer> ImagesArray = new ArrayList<Integer>();
         ImagesArray.addAll(Arrays.asList(IMAGES));
 
-        final ViewPager mPager = (ViewPager) rootView.findViewById(R.id.viewPager);
-        PageIndicatorView pageIndicatorView = (PageIndicatorView) rootView.findViewById(R.id.pageIndicatorView);
+        final ViewPager mPager = (ViewPager) rootView.findViewById( R.id.viewPager);
+        PageIndicatorView pageIndicatorView = (PageIndicatorView) rootView.findViewById( R.id.pageIndicatorView);
 
         mPager.setAdapter(new SlidingImageAdapter(getActivity(), ImagesArray));
 

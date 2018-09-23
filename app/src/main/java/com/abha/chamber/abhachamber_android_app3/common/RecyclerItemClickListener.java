@@ -1,4 +1,4 @@
-package org.abhacci.amado.abhachamber_android_app1.common;
+package com.abha.chamber.abhachamber_android_app3.common;
 
 /**
  * Created by Amado on 4/4/2017.

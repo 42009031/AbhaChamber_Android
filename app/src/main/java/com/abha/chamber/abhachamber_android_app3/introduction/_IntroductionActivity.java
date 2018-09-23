@@ -1,4 +1,4 @@
-package org.abhacci.amado.abhachamber_android_app1.introduction;
+package com.abha.chamber.abhachamber_android_app3.introduction;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,9 +16,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.abha.chamber.abhachamber_android_app3.common.Helper;
+import com.abha.chamber.abhachamber_android_app3.home.HomeActivity;
+
 import org.abhacci.amado.abhachamber_android_app1.R;
-import org.abhacci.amado.abhachamber_android_app1.common.Helper;
-import org.abhacci.amado.abhachamber_android_app1.home.HomeActivity;
 
 import java.util.ArrayList;
 

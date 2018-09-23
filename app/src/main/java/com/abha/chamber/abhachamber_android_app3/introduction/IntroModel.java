@@ -1,4 +1,4 @@
-package org.abhacci.amado.abhachamber_android_app1.introduction;
+package com.abha.chamber.abhachamber_android_app3.introduction;
 
 public class IntroModel {
 

@@ -11,7 +11,7 @@
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:text="أهلا وسهلاً بك"
-        android:textColor="#000"
+        android:textColor="#fff"
         android:textSize="35sp" />
 
     <TextView
@@ -26,6 +26,6 @@
         android:gravity="center"
         android:textSize="20sp"
         android:text="تقدم الغرفة التجارية والصناعية في أبها تطبيقها لخدمة المستفيدين ومواكبة التقنية"
-        android:textColor="#000"
+        android:textColor="#fff"
         />
 </RelativeLayout>

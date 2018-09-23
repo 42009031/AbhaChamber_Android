@@ -1,4 +1,4 @@
-package org.abhacci.amado.abhachamber_android_app1.home.dashboard;
+package com.abha.chamber.abhachamber_android_app3.home.dashboard;
 
 import android.content.Context;
 import android.os.Parcelable;

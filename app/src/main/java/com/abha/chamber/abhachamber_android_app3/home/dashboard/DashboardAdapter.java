@@ -1,4 +1,4 @@
-package org.abhacci.amado.abhachamber_android_app1.home.dashboard;
+package com.abha.chamber.abhachamber_android_app3.home.dashboard;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -9,9 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.abha.chamber.abhachamber_android_app3.common.GenericModel;
+import com.abha.chamber.abhachamber_android_app3.common.Helper;
+
 import org.abhacci.amado.abhachamber_android_app1.R;
-import org.abhacci.amado.abhachamber_android_app1.common.GenericModel;
-import org.abhacci.amado.abhachamber_android_app1.common.Helper;
 
 import java.util.ArrayList;
 

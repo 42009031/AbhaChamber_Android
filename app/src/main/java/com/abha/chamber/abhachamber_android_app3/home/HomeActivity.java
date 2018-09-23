@@ -1,4 +1,4 @@
-package org.abhacci.amado.abhachamber_android_app1.home;
+package com.abha.chamber.abhachamber_android_app3.home;
 
 
 import android.graphics.Color;
@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,12 +19,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.abha.chamber.abhachamber_android_app3.common.GenericModel;
+import com.abha.chamber.abhachamber_android_app3.common.Helper;
+import com.abha.chamber.abhachamber_android_app3.common.RecyclerItemClickListener;
+import com.abha.chamber.abhachamber_android_app3.home.dashboard.HomeFragment;
+import com.abha.chamber.abhachamber_android_app3.home.menu.MenuAdapter;
+
 import org.abhacci.amado.abhachamber_android_app1.R;
-import org.abhacci.amado.abhachamber_android_app1.common.GenericModel;
-import org.abhacci.amado.abhachamber_android_app1.common.Helper;
-import org.abhacci.amado.abhachamber_android_app1.common.RecyclerItemClickListener;
-import org.abhacci.amado.abhachamber_android_app1.home.dashboard.HomeFragment;
-import org.abhacci.amado.abhachamber_android_app1.home.menu.MenuAdapter;
+
 
 import java.util.ArrayList;
 
@@ -35,6 +38,7 @@ public class HomeActivity extends AppCompatActivity {
     private ImageView backBtn, logo;
     private CircleImageView usernameImg;
     private TextView titleTv;
+    private  DrawerLayout drawer;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,7 +60,7 @@ public class HomeActivity extends AppCompatActivity {
         logo = (ImageView) toolbar.findViewById(R.id.logo);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        final DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         RecyclerView menuRv = (RecyclerView) findViewById(R.id.menu_rv);
 
         usernameImg.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_ATOP);
@@ -134,4 +138,18 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
+
+    @Override
+    public void onBackPressed() {
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            int count = getSupportFragmentManager().getBackStackEntryCount();
+            if (count == 0 || count == 1) {
+                finish();
+            } else {
+                super.onBackPressed();
+            }
+        }
+    }
 }

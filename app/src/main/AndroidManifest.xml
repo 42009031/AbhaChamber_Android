@@ -12,7 +12,7 @@
         android:largeHeap="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="org.abhacci.amado.abhachamber_android_app1.splash.SplashActivity"
+            android:name="com.abha.chamber.abhachamber_android_app3.splash.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,11 +22,11 @@
         </activity>
 
         <activity
-            android:name="org.abhacci.amado.abhachamber_android_app1.introduction._IntroductionActivity"
+            android:name="com.abha.chamber.abhachamber_android_app3.introduction._IntroductionActivity"
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="org.abhacci.amado.abhachamber_android_app1.home.HomeActivity"
+            android:name="com.abha.chamber.abhachamber_android_app3.home.HomeActivity"
             android:screenOrientation="portrait" />
     </application>
 

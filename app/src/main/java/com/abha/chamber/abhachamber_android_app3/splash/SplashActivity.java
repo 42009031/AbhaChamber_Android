@@ -1,4 +1,4 @@
-package org.abhacci.amado.abhachamber_android_app1.splash;
+package com.abha.chamber.abhachamber_android_app3.splash;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,8 +12,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.abha.chamber.abhachamber_android_app3.introduction._IntroductionActivity;
+
 import org.abhacci.amado.abhachamber_android_app1.R;
-import org.abhacci.amado.abhachamber_android_app1.introduction._IntroductionActivity;
+
 
 import java.util.Locale;
 

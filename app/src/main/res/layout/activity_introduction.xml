@@ -4,7 +4,7 @@
     xmlns:attrs="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fffaf0">
+    android:background="@mipmap/background">
 
 
     <RelativeLayout
@@ -34,7 +34,7 @@
             android:focusable="true"
             android:scaleType="fitXY"
             android:src="@drawable/circle1"
-            android:tint="#000" />
+            android:tint="#fff" />
 
         <ImageView
             android:id="@+id/circle2"
@@ -45,7 +45,7 @@
             android:focusable="true"
             android:scaleType="fitXY"
             android:src="@drawable/circle2"
-            android:tint="#000" />
+            android:tint="#fff" />
 
         <ImageView
             android:id="@+id/circle3"
@@ -56,7 +56,7 @@
             android:focusable="true"
             android:scaleType="fitXY"
             android:src="@drawable/c1"
-            android:tint="#000" />
+            android:tint="#fff" />
 
     </RelativeLayout>
 
